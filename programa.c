@@ -68,6 +68,9 @@ int main()
                 default : printf("Por favor, utilize apenas as opcoes do menu. \n");
             }
         }
-        printf(" ERRO: Por favor, insira os numeros na ordem requisitada e no intervalo definido. \n \n");
+        else
+        {
+            printf(" ERRO: Por favor, insira os numeros na ordem requisitada e no intervalo definido. \n \n");
+        }
     }
 }
