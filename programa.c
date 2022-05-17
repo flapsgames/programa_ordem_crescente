@@ -57,12 +57,20 @@ int main()
                 // mostra em ordem crescente.
                 case 0 :
                 printf("\n ORDEM CRESCENTE: ");
-                printf(" %d, %d \n", a, b);
+                while (a != b)
+                {
+                a++;
+                printf(" %d", a);
+                }
                 break;
                 // mostra em ordem decrescente.
                 case 1 :
                 printf(" ORDEM DECRESCENTE: ");
-                printf(" %d, %d \n", b, a);
+                while (b != a)
+                {
+                b--;
+                printf(" %d", b);
+                }
                 break;
                 // verifica se o usuário não digitou outro valor diferente do menu.
                 default : printf("Por favor, utilize apenas as opcoes do menu. \n");
