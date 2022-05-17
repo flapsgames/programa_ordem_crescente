@@ -45,35 +45,45 @@ int main()
         {
 
             // Pede o usuário para indicar a ordem desejada.
-            printf(" Em qual ordem deseja mostrar os numeros ? \n 0- CRESCENTE \n 1- DECRESCENTE \n ");
-            scanf(" %d", &ordem);
-
+            printf(" Em qual ordem deseja mostrar os numeros ? \n C- CRESCENTE \n D- DECRESCENTE \n ");
+            // impede que o programa salte direto pro switch
+            getchar();
             // define os numeros entre A e B
-            
-
+            ordem = getchar();
             // Verifica a opcao do usuario.
             switch (ordem)
             {
                 // mostra em ordem crescente.
-                case 0 :
+                case 'c' :
+                case 'C' :
                 printf("\n ORDEM CRESCENTE: ");
+                // Loop que adiciona o numero a e os numeros entre o A e o B, na ordem crescente
                 while (a != b)
                 {
-                a++;
                 printf(" %d", a);
+                a++;
                 }
+                // Adiciona o último numero da sequência (o próprio b)
+                printf(" %d \n", b);
+                n = 0;
                 break;
                 // mostra em ordem decrescente.
-                case 1 :
+                case 'd' :
+                case 'D' :
                 printf(" ORDEM DECRESCENTE: ");
+                // Loop que adiciona o numero a e os numeros entre o A e o B, na ordem crescente
                 while (b != a)
                 {
-                b--;
                 printf(" %d", b);
+                b--;
                 }
+                // Adiciona o último numero da sequência (o próprio a)
+                printf(" %d \n", a);
+                n = 0;
                 break;
                 // verifica se o usuário não digitou outro valor diferente do menu.
                 default : printf("Por favor, utilize apenas as opcoes do menu. \n");
+                break;
             }
         }
         else
